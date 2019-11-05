@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div>
     <p class="rootnav"> <%= link_to root_path do %>
-        <p class="logo mb-4">Ferre</p>
+        <p class="logo">Ferre</p>
       <% end %>
     </p>
   </div>
@@ -9,11 +9,11 @@
     <% if user_signed_in? %>
       <li><%= link_to 'Ajouter un produit', root_path %></li>
       <li>|</li>
-      <li><%= link_to 'Deconnexion', root_path, method: :delete %></li>
+      <li><%= link_to 'Deconnexion', destroy_user_session_path, method: :delete %></li>
     <% else %>
-      <li> <%= link_to 'Connexion', root_path %></li>
+      <li> <%= link_to 'Connexion', new_user_session_path %></li>
       <li>|</li>
-      <li><%= link_to 'Créer un compte', root_path %></li>
+      <li><%= link_to 'Créer un compte', new_user_registration_path %></li>
     <% end %>
   </ul>
 </nav>

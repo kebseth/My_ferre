@@ -1,7 +1,7 @@
 .navbar{
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 100px;
   font-size: 25px;
   position:fixed;
   z-index: 40;
@@ -12,8 +12,9 @@
   box-sizing:border-box;
   transition: .5s;
   font-weight:bold;
+  background-color: rgba(0,0,0,.1);
   a{
-    color: $red;
+    color: $orange;
   }
 }
 .rootnav{
@@ -30,14 +31,13 @@ nav.black {
   }
 }
 .logo{
-  background:#474747;
-  padding: 5px 10px;
-  border-radius:3px;
+  font-size: 50px;
+  padding: 0px 10px;
   a{
-    color:$yellow;
+    color:$pourpre;
   }
   a:hover{
-    color: white;
+    color: $red;
   }
 }
 
@@ -51,7 +51,7 @@ nav.black {
     transition-duration: .4s;
   }
   a:hover{
-    color:$red;
+    color:$orange;
     font-size: 27px;
     transition-duration: .4s;
   }
