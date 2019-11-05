@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2 class='text-center mb-4'>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -10,11 +10,23 @@
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
                 required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
+                hint: ("#{@minimum_password_length} charactères minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" },
+                label: 'Mot de passe' %>
     <%= f.input :password_confirmation,
                 required: true,
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password" },
+                label: 'Confirmation de votre mot de passe'  %>
+    <%= f.input :nom,
+                required: true %>
+    <%= f.input :adresse_hotel,
+                required: true,
+                label: 'Adresse de votre hotel' %>
+    <%= f.input :nom_hotel,
+                required: true,
+                label: 'Nom de votre hotel' %>
+    <%= f.input :telephone,
+                required: true %>
   </div>
 
   <div class="form-actions">
