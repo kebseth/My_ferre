@@ -1,15 +1,15 @@
 <nav class="navbar">
   <div>
     <p class="rootnav"> <%= link_to root_path do %>
-        <p class="logo">Ferre</p>
+        <p class="logo">MyFerre</p>
       <% end %>
     </p>
   </div>
   <ul class="onglets">
     <% if user_signed_in? %>
-      <li><%= link_to 'Ajouter un produit', root_path %></li>
+      <li><%= link_to 'Ajouter un produit', new_produits_path %></li>
       <li>|</li>
-      <li><%= link_to 'Profile', root_path %></li>
+      <li><%= link_to 'Profile', edit_user_registration_path %></li>
       <li>|</li>
       <li><%= link_to 'Deconnexion', destroy_user_session_path, method: :delete %></li>
     <% else %>

@@ -1,0 +1,12 @@
+<h1 class='text-center m-5'>Ajouter un produit</h1>
+<%= simple_form_for @produit do |f| %>
+  <%= f.input :nom,
+      required: true %>
+  <%= f.input :description,
+      required: true %>
+  <%= f.input :photo,
+      required: true %>
+  <div class="text-center">
+    <%= f.submit 'Ajouter', class: 'mt-5 btn btn-contact' %>
+  </div>
+<% end %>

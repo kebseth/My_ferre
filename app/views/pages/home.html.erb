@@ -1,2 +1,23 @@
-<h1 class='text-center'>Ferre</h1>
-<p>Ferre est le site vous permettant d'échanger les élements qui ne vous servent pas dans votre hotel. Consultez ci dessous les produits que les autres gérants d'hotels vous proposent, et ajoutez vos produits</p>
+<h1 class='text-center mb-5'>MyFerre</h1>
+<p class='mb-5'>My Ferre est un site qui permet le partage de ressources inutilisées entre hôtel du groupe Ferre.
+Si vous avez un objet qui ne vous sert plus, qui prend la poussière ou que vous compté remplacer vous pouvez poster une annonce qui le rendra visible pour les hôtels du groupe. Cela permet de vous désencombrer et de faire profiter les autre établissements d’un objet dont ils auront l’utilité.
+Cela permet aussi d’avoir une visibilité sur le stock des produits disponible sur l’ensemble des hôtels du groupe et de ne pas acheter inutilement un produit qu’un autre établissement aurait en stock.</p>
+
+<% @produits.each do |produit| %>
+  <div class="card-product mb-3">
+    <div class="infos">
+      <%= image_tag cl_image_path(produit.photo, height: 150, width: 300, crop: :fit) %>
+      <div class="card-product-infos">
+        <h2><%= produit.nom %></h2>
+        <p><%= produit.description %></p>
+      </div>
+    </div>
+    <div class="contact">
+      <p>Mail : <%= produit.user.email %></p>
+      <p>Nom : <%= produit.user.nom_hotel %></p>
+      <p>Adresse : <%= produit.user.adresse_hotel %></p>
+      <p>Téléphone : <%= produit.user.telephone %></p>
+    </div>
+  </div>
+<% end %>
+
