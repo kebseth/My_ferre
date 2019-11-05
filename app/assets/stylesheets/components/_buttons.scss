@@ -1,0 +1,31 @@
+.btn-contact{
+  background-color: $pourpre;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 0 3px black;
+  transition-duration: .2s;
+  padding: 5px 10px;
+  &:hover{
+    color:$yellow;
+    cursor: pointer;
+    box-shadow: 0 0 2px white;
+    transition-duration: .2s;
+  }
+}
+
+.btn-secondary{
+  background-color: $orange;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 0 3px black;
+  transition-duration: .2s;
+  padding: 5px 10px;
+  &:hover{
+    color:$yellow;
+    cursor: pointer;
+    box-shadow: 0 0 2px white;
+    transition-duration: .2s;
+  }
+}
