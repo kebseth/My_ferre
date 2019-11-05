@@ -4,19 +4,11 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
 }
 .infos {
   overflow: hidden;
-  width:80%;
-  height: 200px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
 }
-.card-product img {
-  height: 100%;
-  width: 200px;
+.img {
   object-fit: cover;
 }
 
@@ -39,5 +31,23 @@
 }
 
 .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
   margin: 0 auto;
+  p {
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .infos {width:70%}
+}
+
+@media only screen and (max-width: 767px) {
+  .infos {width:70%}
+  .contact{p{font-size:10px;}}
+}
+@media only screen and (max-width: 560px) {
+  .infos {width:70%}
+  .contact{p{font-size:10px;}}
 }

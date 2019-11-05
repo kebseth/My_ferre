@@ -55,46 +55,53 @@ nav.black {
     transition-duration: .4s;
   }
 }
-
+@media only screen and (max-width: 1080px) {
+  .navbar{font-size:17px}
+  .onglets{li{margin-right: 27px}}
+  nav.black{padding: 8px 40px}
+}
 @media only screen and (max-width: 940px) {
-  .navbar{font-size:18px}
+  .navbar{font-size:17px}
+  .onglets{li{margin-right: 27px}}
   nav.black{padding: 8px 40px}
 }
 @media only screen and (max-width: 860px) {
   .navbar{font-size:17px}
+  .onglets{li{margin-right: 20px}}
   nav.black{padding: 8px 40px}
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 803px) {
   .navbar{font-size:15px}
-  .onglets{li{margin-right: 30px}}
+  .onglets{li{margin-right: 20px}}
   nav.black{padding: 6px 20px}
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 720px) {
   .navbar{font-size:14px}
   .onglets{li{margin-right: 14px}}
   nav.black{padding: 6px 20px}
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 670px) {
   .navbar{font-size:14px}
   .onglets{li{margin-right: 5px}}
   nav.black{padding: 6px 20px}
+  .logo{ font-size: 40px}
 }
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 580px) {
   .navbar{font-size:12px}
   .onglets{li{margin-right: 4px}}
   nav.black{padding: 4px 10px}
   .logo{ font-size: 40px}
 }
-
-@media only screen and (max-width: 480px) {
-  .navbar{font-size:13px}
-  .onglets{li{margin: 18px 4px 0 0}}
+@media only screen and (max-width: 540px) {
+  .navbar{font-size:12px}
+  .onglets{li{margin-right: 4px}}
   nav.black{padding: 4px 10px}
-  .logo{ font-size: 30px; padding: 0px 5px;}
+  .logo{ font-size: 30px;  padding: 0px 5px;}
 }
+
 @media only screen and (max-width: 456px) {
   .navbar{font-size:11px}
-  .onglets{li{margin: 18px 2px 0 0}}
+  .onglets{margin-left: 80px;li{margin: -20px 2px 0 0}}
   nav.black{padding: 4px 10px}
   .logo{ font-size: 25px; padding: 0px 0px;}
 }

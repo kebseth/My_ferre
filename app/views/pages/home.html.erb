@@ -1,18 +1,20 @@
 <h1 class='text-center mb-5'>MyFerre</h1>
-<p class='mb-5'><span class='red'>My Ferre</span> est un site qui permet le <span class='red'>partage de ressources inutilisées</span> entre hôtel du groupe Ferre.
-Si vous avez un objet qui ne vous sert plus, qui prend la poussière ou que vous compté remplacer vous pouvez poster une annonce qui le rendra visible pour les hôtels du groupe. Cela permet de vous désencombrer et de faire profiter les autre établissements d’un objet dont ils auront l’utilité.
+<p class='mb-5'><span class='red'>My Ferre</span> est un site qui permet le <span class='red'>partage de ressources inutilisées</span> entre hôtels du groupe Ferre.
+Si vous avez un objet qui ne vous sert plus, qui prend la poussière ou que vous compté remplacer vous pouvez poster une annonce qui le rendra visible pour les hôtels du groupe. Cela permet de vous spandésencombrer et de faire profiter les autre établissements d’un objet dont ils auront l’utilité.
 Cela permet aussi d’avoir une visibilité sur le stock des produits disponible sur l’ensemble des hôtels du groupe et de ne pas acheter inutilement un produit qu’un autre établissement aurait en stock.</p>
 
 <% @produits.each do |produit| %>
-  <div class="card-product mb-3">
-    <div class="infos">
-      <%= image_tag cl_image_path(produit.photo, height: 150, width: 300, crop: :fit) %>
-      <div class="card-product-infos">
-        <h2><%= produit.nom %></h2>
-        <p><%= produit.description %></p>
-      </div>
+  <div class="card-product mb-3 row">
+    <div class='img'>
+      <%= image_tag cl_image_path(produit.photo, height: 250, width: 250, crop: :fit) %>
     </div>
-    <div class="contact">
+      <div class="card-product-infos">
+        <div class="infos">
+          <h2><%= produit.nom %></h2>
+          <p><%= produit.description %></p>
+        </div>
+      </div>
+    <div class="contact d-flex align-items-center">
       <p>Mail : <%= produit.user.email %></p>
       <p>Nom : <%= produit.user.nom_hotel %></p>
       <p>Adresse : <%= produit.user.adresse_hotel %></p>
