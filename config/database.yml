@@ -80,6 +80,5 @@ test:
 #
 production:
   <<: *default
-  database: My_ferre_production
-  username: My_ferre
-  password: <%= ENV['MY_FERRE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
+
