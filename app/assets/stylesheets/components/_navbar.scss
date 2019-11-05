@@ -1,12 +1,85 @@
-.navbar-lewagon {
+.navbar{
+  display: flex;
   justify-content: space-between;
-  background: white;
+  height: 80px;
+  font-size: 25px;
+  position:fixed;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding:10px 20px;
+  box-sizing:border-box;
+  transition: .5s;
+  font-weight:bold;
+  a{
+    color: $red;
+  }
+}
+.rootnav{
+  p{
+    color:$yellow !important;
+  }
+}
+nav.black {
+  background: rgba(0,0,0,.9);
+  height:80px;
+  padding: 10px 50px;
+  a{
+    color: $yellow;
+  }
+}
+.logo{
+  background:#474747;
+  padding: 5px 10px;
+  border-radius:3px;
+  a{
+    color:$yellow;
+  }
+  a:hover{
+    color: white;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.onglets{
+  display: flex;
+  list-style: none;
+  li{
+    margin-right: 40px;
+  }
+  a{
+    transition-duration: .4s;
+  }
+  a:hover{
+    color:$red;
+    font-size: 27px;
+    transition-duration: .4s;
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+@media only screen and (max-width: 860px) {
+  .navbar{font-size:20px}
+  .onglets{a:hover{font-size:22px}}
+  nav.black{padding: 8px 40px}
+}
+@media only screen and (max-width: 768px) {
+  .navbar{font-size:17px}
+  .onglets{a:hover{font-size:19px} li{margin-right: 30px}}
+  nav.black{padding: 6px 20px}
+}
+@media only screen and (max-width: 650px) {
+  .navbar{font-size:17px}
+  .onglets{a:hover{font-size:19px} li{margin-right: 14px}}
+  nav.black{padding: 6px 20px}
+}
+@media only screen and (max-width: 480px) {
+  .navbar{font-size:14px}
+  .onglets{a:hover{font-size:15px} li{margin-right: 10px}}
+  nav.black{padding: 4px 10px}
+}
+
+@media only screen and (max-width: 420px) {
+  .navbar{font-size:13px}
+  .onglets{a:hover{font-size:15px} li{margin-right: 4px}}
+  nav.black{padding: 4px 10px}
 }
