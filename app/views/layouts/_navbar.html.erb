@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <div>
+    <p class="rootnav"> <%= link_to root_path do %>
+        <p class="logo mb-4">Bouvet Revetements</p>
+      <% end %>
+    </p>
+  </div>
+  <ul class="onglets">
+    <li><%= link_to 'Sols', root_path %></li>
+    <% if user_signed_in? %>
+      <li>|</li>
+      <li><%= link_to 'Ajouter', root_path %></li>
+      <li>|</li>
+      <li><%= link_to 'Deco', root_path, method: :delete %></li>
+    <% else %>
+      <li>|</li>
+      <li> <%= link_to 'Contact', root_path %></li>
+      <li>|</li>
+      <li><%= link_to 'Devis', root_path %></li>
+    <% end %>
+  </ul>
+</nav>
