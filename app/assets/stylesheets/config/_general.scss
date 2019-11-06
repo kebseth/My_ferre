@@ -1,8 +1,10 @@
 body{
-  background-color: #F7EFE9;
+  background-color: #414141;
   line-height: 2em;
 }
-
+p {
+  color: white;
+}
 a{
   text-decoration: none !important;
   color: black;
@@ -16,7 +18,10 @@ a:hover{
 .top-perso{
   margin-top: 117px;
 }
-
+label {
+  color: #ff0000;
+  font-weight: bold;
+}
 .align{
   margin: 0 auto;
 }

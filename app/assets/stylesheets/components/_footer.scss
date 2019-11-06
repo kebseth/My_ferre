@@ -1,0 +1,40 @@
+.footer {
+  background: #252525;
+  display: flex;
+  align-items: center;
+  height: 150px;
+  width:100%;
+  position: relative;
+  top: 94px;
+  p{
+    color: $red;
+  }
+  i{
+    color: $red;
+  }
+}
+.flexibility{
+  display: flex;
+}
+.ml-resp{
+  margin-left: 50px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.text-uppercase {
+  color : white;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .flexibility {display: block;}
+  .footer { height: 250px;}
+}
+
+@media only screen and (max-width: 480px) {
+  .ml-resp {margin-left:0}
+}

@@ -1,24 +1,33 @@
 <h1 class='text-center mb-5'>MyFerre</h1>
 <p class='mb-5'><span class='red'>My Ferre</span> est un site qui permet le <span class='red'>partage de ressources inutilisées</span> entre hôtels du groupe Ferre.
-Si vous avez un objet qui ne vous sert plus, qui prend la poussière ou que vous compté remplacer vous pouvez poster une annonce qui le rendra visible pour les hôtels du groupe. Cela permet de vous spandésencombrer et de faire profiter les autre établissements d’un objet dont ils auront l’utilité.
-Cela permet aussi d’avoir une visibilité sur le stock des produits disponible sur l’ensemble des hôtels du groupe et de ne pas acheter inutilement un produit qu’un autre établissement aurait en stock.</p>
+Si vous avez un objet qui ne vous sert plus, qui prend la poussière ou que vous comptez remplacer vous pouvez poster une annonce qui le rendra visible pour les hôtels du groupe. Cela permet de vous <span class='red'>désencombrer et de faire profiter les autre établissements</span> d’un objet dont ils auront l’utilité.
+Cela permet aussi d’avoir une <span class='red'>visibilité sur le stock</span> des produits disponible sur l’ensemble des hôtels du groupe et de ne pas acheter inutilement un produit qu’un autre établissement aurait en stock.</p>
 
 <% @produits.each do |produit| %>
-  <div class="card-product mb-3 row">
-    <div class='img'>
-      <%= image_tag cl_image_path(produit.photo, height: 250, width: 250, crop: :fit) %>
-    </div>
-      <div class="card-product-infos">
+  <div class='position'>
+    <% if produit.user == @user %>
+    <%= link_to produits_path(produit), method: :delete do  %>
+      <div class='cross'>
+        <i class="far fa-times-circle"></i>
+      </div>
+    <% end %>
+    <% end %>
+    <div class="card-product row">
+      <div class='img col-lg-3 col-md-4 col-sm-6 col-xs-6'>
+        <%= image_tag cl_image_path(produit.photo, height: 250, width: 250, crop: :fit) %>
+      </div>
+      <div class="contact d-flex col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <p>Mail : <span class='red'><%= produit.user.email %></span></p>
+        <p>Nom : <span class='red'><%= produit.user.nom_hotel %></span></p>
+        <p>Adresse : <span class='red'><%= produit.user.adresse_hotel %></span></p>
+        <p>Téléphone : <span class='red'><%= produit.user.telephone %></span></p>
+      </div>
+      <div class="card-product-infos col-6 col-md-5 col-sm-12 col-xs-8">
         <div class="infos">
-          <h2><%= produit.nom %></h2>
+          <h2><span class='red'><%= produit.nom %></span></h2>
           <p><%= produit.description %></p>
         </div>
       </div>
-    <div class="contact d-flex align-items-center">
-      <p>Mail : <%= produit.user.email %></p>
-      <p>Nom : <%= produit.user.nom_hotel %></p>
-      <p>Adresse : <%= produit.user.adresse_hotel %></p>
-      <p>Téléphone : <%= produit.user.telephone %></p>
     </div>
   </div>
 <% end %>

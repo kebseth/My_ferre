@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @produits = Produit.all
+    @user = current_user
   end
 end

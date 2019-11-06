@@ -4,17 +4,23 @@ class ProduitsController < ApplicationController
   end
 
   def create
-    @produit = Produit.new(rent_params)
+    @produit = Produit.new(produit_params)
     @produit.user = current_user
     save_produit
   end
 
   def destroy
+    @produit = Produit.find(params[:format])
+    if @produit.destroy
+      redirect_to root_path
+    else
+      render :home
+    end
   end
 
   private
 
-  def rent_params
+  def produit_params
     params.require(:produit).permit(:nom, :description, :photo)
   end
 

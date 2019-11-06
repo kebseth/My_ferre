@@ -4,12 +4,28 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
+  margin-bottom: 30px;
+  position:relative;
+  background-color: #252525
 }
 .infos {
   overflow: hidden;
 }
+.position {
+  position:relative;
+}
+.cross {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  overflow: visible !important;
+  z-index:1;
+  font-size: 32px;
+  color: red;
+}
 .img {
   object-fit: cover;
+  padding-left: 0 !important;
 }
 
 .card-product h2 {
@@ -33,21 +49,23 @@
 .contact {
   display: flex;
   flex-direction: column;
-  align-items: center !important;
   margin: 0 auto;
+  padding-top: 35px;
   p {
     font-weight: bold;
+    margin-bottom:10px;
   }
 }
-@media only screen and (max-width: 1000px) {
-  .infos {width:70%}
+@media only screen and (max-width: 768px) {
+  .card-product {height:350px}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 575px) {
   .infos {width:70%}
-  .contact{p{font-size:10px;}}
+  .contact{width: 50%;height:60%;  background: #414141; border-radius: 6px 0 0 6px; p{font-size:10px;}}
+  .img {width: 50%; padding-right: 0 !important}
 }
-@media only screen and (max-width: 560px) {
-  .infos {width:70%}
-  .contact{p{font-size:10px;}}
-}
+// @media only screen and (max-width: 560px) {
+//   .infos {width:70%}
+//   .contact{p{font-size:10px;}}
+// }
